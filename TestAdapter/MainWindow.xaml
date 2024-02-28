@@ -1,0 +1,23 @@
+﻿<Window x:Class="TestAdapter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestAdapter"
+        mc:Ignorable="d"
+        Title="DataAdapter Tester" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" x:Name="datagrid" ItemsSource="{Binding}"></DataGrid>
+        
+        <!-- Button -->
+        <StackPanel Grid.Row="1" Background="Beige" Orientation="Horizontal">
+            <Button x:Name="btnLoad" Content="Load" Padding="20, 0" Click="btnLoad_Click"></Button>
+            <Button x:Name="btnSave" Content="Save" Padding="20, 0" Click="btnSave_Click"></Button>
+            <Button x:Name="btnDelete" Content="Delete" Padding="20, 0" Click="btnDelete_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
